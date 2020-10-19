@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import Axios from 'axios'
-import Link from 'next/link'
+import Layout from '../components/Layout'
 
 export default class Home extends Component {
     constructor(){
@@ -27,11 +27,8 @@ export default class Home extends Component {
         }
 
         return (
-            <div>
+            <Layout>
                 <h3>Home Page</h3>
-                <Link href="/order">
-                    <a>Order Page</a>
-                </Link>
                 {
                     data.map((el, index) => {
                         return(
@@ -41,7 +38,7 @@ export default class Home extends Component {
                         )
                     })
                 }
-            </div>
+            </Layout>
         )
     }
 }

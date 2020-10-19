@@ -1,8 +1,13 @@
+import Header from './Header'
+
 const Layout = ({ children }) => {
     return(
-        <div className="main-layout">
-            { children }
-        </div>
+        <>
+            <Header />
+            <section className="main-layout">
+                { children }
+            </section>
+        </>
     )
 }
 
